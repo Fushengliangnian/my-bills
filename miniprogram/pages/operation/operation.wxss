@@ -1,0 +1,8 @@
+/* miniprogram/pages/operation/operation.wxss */
+
+.icon {
+  position: relative;
+  margin-right:30;
+  left:2;
+  top:37px;
+}

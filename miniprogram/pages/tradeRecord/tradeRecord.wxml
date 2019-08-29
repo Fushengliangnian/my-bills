@@ -1,0 +1,27 @@
+<!--miniprogram/pages/tradeRecord/tradeRecord.wxml-->
+<i-card title="{{ title }}" thumb="{{ avatarUrl }}" full="true" i-class="card-demo">
+    <view slot="content">支出总金额: {{ total_amount }}</view>
+</i-card>
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">时间</view>
+    <view class="th">{{show}}</view>
+    <view class="th ">金额</view>
+    <view class="th ">备注</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.create_time}}</view>
+      <view class="td">{{item.source_type}}</view>
+      <view class="td">{{item.amount}}</view>
+      <view class="td">{{ item.note }}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.create_time}}</view>
+      <view class="td">{{item.source_type}}</view>
+      <view class="td">{{item.amount}}</view>
+      <view class="td">{{ item.note }}</view>
+    </view>
+  </block>
+</view>

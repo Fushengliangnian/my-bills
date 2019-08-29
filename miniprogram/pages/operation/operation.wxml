@@ -1,0 +1,31 @@
+<!--miniprogram/pages/operation/operation.wxml-->
+<i-panel title="{{ text }}">
+  <i-input value="{{ amount }}" type="number" title="金额" autofocus placeholder="金额" bind:blur="changeAmonut" />
+  
+  <i-row>
+    <i-panel title="{{ title }}">
+      <i-col span="22" i-class="col-class" offset="1">
+
+        <i-radio-group current="{{current}}" bindchange="handleFruitChange">
+          <i-radio wx:for="{{show_list}}" position="{{position}}" wx:key="{{item.id}}" value="{{item.name}}">
+          </i-radio>
+        </i-radio-group>
+      </i-col>
+    </i-panel>
+  </i-row>
+
+  <i-input value="{{ note }}" type="textarea" title="备注" placeholder="备注" maxlength="50" bind:blur="changeNote"/>
+</i-panel>
+
+<i-button bind:click="subClick" type="primary" shape="circle" size="small">提交</i-button>
+
+<view class="container" style='display: {{ display }}'>
+  <i-spin fix size="large" custom>
+    <i-icon type="refresh" size="20" i-class="icon-load"></i-icon>
+    <view> 上传中... </view>
+  </i-spin>
+  <!-- <i-spin custom>
+    <i-icon type="refresh" size="20" i-class="icon-load"></i-icon>
+    <view>Loading</view>
+  </i-spin> -->
+</view>

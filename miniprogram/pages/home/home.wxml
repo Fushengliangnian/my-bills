@@ -1,0 +1,8 @@
+<!--miniprogram/pages/home/home.wxml-->
+<i-cell-group>
+    <i-cell title="{{ title1 }}" is-link url="/pages/operation/operation?title={{ title1 }}"></i-cell>
+    <i-cell title="{{ title2 }}" is-link url="/pages/operation/operation?title={{ title2 }}"></i-cell>
+    <i-cell title="{{ title3 }}" is-link url="/pages/tradeRecord/tradeRecord?type=0"></i-cell>
+    <i-cell title="{{ title4 }}" is-link url="/pages/tradeRecord/tradeRecord?type=1"></i-cell>
+    <i-cell title="{{ title5 }}" is-link url="/pages/tradeRecord/tradeRecord"></i-cell>
+</i-cell-group>
